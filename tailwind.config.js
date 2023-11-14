@@ -13,6 +13,19 @@ module.exports = {
         extend: {
             fontFamily: {
                 sans: ['Nunito', ...defaultTheme.fontFamily.sans],
+                montserrat: "Montserrat"
+            },
+            screens: {
+                "--sm": "320px",
+                "-sm": "420px",
+                ".sm": "550px",
+                "+md": "830px",
+                "++md": "870px",
+                "+lg": "1180px",
+                "++lg": "1200px",
+                "--xlg": "1440px",
+                "+xxl": "1600px",
+                "++xxl": "1920px"
             },
         },
     },
