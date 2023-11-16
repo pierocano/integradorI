@@ -12,4 +12,8 @@
             </div>
         </div>
     </div>
+
+    <a href="https://api.whatsapp.com/send/?phone=%2B56984630755&text&type=phone_number&app_absent=0">
+        Cotizar mediante WhatsApp
+    </a>
 </x-app-layout>
