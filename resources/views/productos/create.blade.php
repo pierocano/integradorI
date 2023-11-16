@@ -7,29 +7,29 @@
 @stop
 
 @section('content')
-    <section class="content container-fluid">
-        <div class="row">
-            <div class="col-md-12">
+<section class="content container-fluid">
+    <div class="row">
+        <div class="col-md-12">
 
-                @includeif('partials.errors')
+            @includeif('partials.errors')
 
-                <div class="card card-default">
-                    <div class="card-header">
-                        <span class="card-title">Create Producto</span>
-                    </div>
-                    <div class="card-body">
-                        <form method="POST" action="{{ route('productos.store') }}"  role="form" enctype="multipart/form-data">
-                            @csrf
+            <div class="card card-default">
+                <div class="card-header">
+                    <span class="card-title" style="display: flex; flex-direction: row; gap: 3; font-weight: bolder; text-transform: uppercase;">Crear Producto</span>
+                </div>
+                <div class="card-body">
+                    <form method="POST" action="{{ route('productos.store') }}" role="form" enctype="multipart/form-data">
+                        @csrf
 
-                            @include('productos.form')
+                        @include('productos.form')
 
-                        </form>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
-    </section>
-    @stop
+    </div>
+</section>
+@stop
 
 @section('css')
 <!-- <link rel="stylesheet" href="/css/admin_custom.css"> -->
@@ -38,4 +38,3 @@
 @section('js')
 <!-- <script> console.log('Hi!'); </script> -->
 @stop
-
