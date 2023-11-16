@@ -3,13 +3,13 @@
 @section('title', 'Dashboard')
 
 @section('content_header')
-<h1>CrearProducto</h1>
+<h1>CrearProducto<a href="https://www.flaticon.es/iconos-gratis/producto" title="producto iconos">Producto iconos creados por Eucalyp - Flaticon</a></h1>
 @stop
 
 @section('content')
     <section class="content container-fluid">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-14">
 
                 @includeif('partials.errors')
 
