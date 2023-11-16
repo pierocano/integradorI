@@ -43,12 +43,12 @@
                                     <th>Precio</th>
                                     <th>Cantidad</th>
 
-                                    <th>Action</th>
+                                    <th>Accion</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <!-- el  foreach tien 2 valores el primero es el nombre de la variable y el segundo es el valor de la variable -->
-                            
+
                                 @foreach ($productos as $producto)
                                 <tr>
                                     <td>{{ $producto->id }}</td>
@@ -58,13 +58,13 @@
                                     <td>{{ $producto->precio }}</td>
                                     <td>{{ $producto->cantidad }}</td>
                                     <td>
-                                        <a class="btn btn-sm btn-primary " href="{{ route('productos.show',$producto) }}">  Show</a>
-                                        <a class="btn btn-sm btn-success" href="{{ route('productos.edit',$producto) }}">  Edit</a>
+                                        <a class="btn btn-sm btn-primary " href="{{ route('productos.show',$producto) }}">Listar</a>
+                                        <a class="btn btn-sm btn-success" href="{{ route('productos.edit',$producto) }}"> Editar</a>
                                         <form action="{{ route('productos.destroy',$producto) }}" method="POST">
 
                                             @csrf
                                             @method('DELETE')
-                                            <button type="submit" class="btn btn-danger btn-sm">  Delete</button>
+                                            <button type="submit" class="btn btn-danger btn-sm"> Eliminar</button>
                                         </form>
 
                                     </td>
@@ -86,15 +86,15 @@
 @stop
 
 @section('js')
-    <script>
-        $(document).ready(function() {
-            $('#table').DataTable({
-                dom: 'Bfrtip',
-                buttons: [
-                    'copy', 'csv', 'excel', 'pdf', 'print'
-                ]
-            });
-
+<script>
+    $(document).ready(function() {
+        $('#table').DataTable({
+            dom: 'Bfrtip',
+            buttons: [
+                'copy', 'csv', 'excel', 'pdf', 'print'
+            ]
         });
-    </script>
+
+    });
+</script>
 @stop

@@ -8,31 +8,31 @@
 
 
 @section('content')
-    <section class="content container-fluid">
-        <div class="">
-            <div class="col-md-12">
+<section class="content container-fluid">
+    <div class="">
+        <div class="col-md-12">
 
-                @includeif('partials.errors')
+            @includeif('partials.errors')
 
-                <div class="card card-default">
-                    <div class="card-header">
-                        <span class="card-title">Update Producto</span>
-                    </div>
-                    <div class="card-body">
-                        <!-- laravelcolective form editar-->
-                        {!! Form::model($producto, ['route' => ['productos.update', $producto], 'method' => 'PUT']) !!}
+            <div class="card card-default">
+                <div class="card-header">
+                    <span class="card-title" style="display: flex; flex-direction: row; gap: 3; font-weight: bolder; text-transform: uppercase;">Actualizar Producto</span>
+                </div>
+                <div class="card-body">
+                    <!-- laravelcolective form editar-->
+                    {!! Form::model($producto, ['route' => ['productos.update', $producto], 'method' => 'PUT']) !!}
 
 
 
-                            @include('productos.form')
+                    @include('productos.form')
 
-                        {!! Form::close() !!}
-                    </div>
+                    {!! Form::close() !!}
                 </div>
             </div>
         </div>
-    </section>
-    @stop
+    </div>
+</section>
+@stop
 
 @section('css')
 <!-- <link rel="stylesheet" href="/css/admin_custom.css"> -->
@@ -41,4 +41,3 @@
 @section('js')
 <!-- <script> console.log('Hi!'); </script> -->
 @stop
-
