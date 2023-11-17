@@ -8,7 +8,7 @@
 
 @section('content')
 <div class="card">
-<h1>Bienvenido {{ Auth::user()->name }}</h1>
+<h1>Bienvenido  {{ Auth::user()->name }}</h1>
 
 </div>
 
